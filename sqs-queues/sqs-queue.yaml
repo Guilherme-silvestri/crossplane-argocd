@@ -18,4 +18,4 @@ metadata:
 spec:
   forProvider:
     name: second-queue
-    region: us-east-1
+    region: sa-east-1
