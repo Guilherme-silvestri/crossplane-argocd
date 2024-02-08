@@ -1,0 +1,9 @@
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  name: s3-bucket-dmcard
+spec:
+  forProvider:
+    region: sa-east-1
+  providerConfigRef:
+    name: default
