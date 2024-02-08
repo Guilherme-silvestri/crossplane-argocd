@@ -1,0 +1,21 @@
+apiVersion: sqs.aws.upbound.io/v1beta1
+kind: Queue
+metadata:
+  name: first-queue
+spec:
+  forProvider:
+    name: first-queue
+    region: us-east-1
+
+---
+
+apiVersion: sqs.aws.upbound.io/v1beta1
+kind: Queue
+metadata:
+  name: second-queue
+  annotations:
+    crossplane.io/external-name: https://sqs.us-east-1.amazonaws.com/xxxxxxxxx/second-queue
+spec:
+  forProvider:
+    name: second-queue
+    region: us-east-1
